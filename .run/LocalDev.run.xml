@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LocalDev" type="CompoundRunConfigurationType">
+    <toRun name="dev" type="js.build_tools.npm" />
+    <toRun name="Worker" type="PhpLocalRunConfigurationType" />
+    <toRun name="horizon" type="PhpLocalRunConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
