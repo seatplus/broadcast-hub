@@ -74,12 +74,12 @@ class BroadcastHubServiceProvider extends ServiceProvider
 
     private function addCommands()
     {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                CorporationTrackingCommand::class,
-                NewCorporationMemberCommand::class,
-            ]);
-        }
+
+        $this->commands([
+            BroadcastAllCommand::class,
+            CorporationTrackingCommand::class,
+            NewCorporationMemberCommand::class,
+        ]);
 
     }
 }
