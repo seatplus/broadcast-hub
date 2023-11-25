@@ -4,6 +4,7 @@ namespace Seatplus\BroadcastHub;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Seatplus\BroadcastHub\Commands\BroadcastAllCommand;
 use Seatplus\BroadcastHub\Commands\CorporationTracking\CorporationTrackingCommand;
 use Seatplus\BroadcastHub\Commands\CorporationTracking\NewCorporationMemberCommand;
 use Seatplus\BroadcastHub\Events\NotificationFailed;
@@ -57,6 +58,11 @@ class BroadcastHubServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/permissions.php',
             'web.permissions'
+        );
+
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/jobs.php',
+            'seatplus.updateJobs'
         );
     }
 
