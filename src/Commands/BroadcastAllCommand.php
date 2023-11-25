@@ -19,5 +19,4 @@ class BroadcastAllCommand extends Command
 
         return self::SUCCESS;
     }
-
 }
