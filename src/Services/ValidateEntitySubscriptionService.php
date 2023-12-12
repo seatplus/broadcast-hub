@@ -11,7 +11,7 @@ class ValidateEntitySubscriptionService
     /**
      * @throws \Throwable
      */
-    public function __invoke(string $notification_string, int $entity_id = null): Collection
+    public function __invoke(string $notification_string, ?int $entity_id = null): Collection
     {
 
         // check if notification_string is subclass of Notification containing getEntityType method
