@@ -88,9 +88,9 @@ it('stores subscripiton', function () {
     // create notification class
     $notification = new class implements \Seatplus\BroadcastHub\Contracts\Notification
     {
-        public function via(): string
+        public function via(): array
         {
-            return 'broadcast';
+            return ['broadcast'];
         }
 
         public static function getPermissions(): array

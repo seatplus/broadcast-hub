@@ -21,7 +21,7 @@ abstract class GlobalNotification extends LaravelNotification implements Notific
         return static::$description ?? '';
     }
 
-    abstract public function via(): string;
+    abstract public function via(): array;
 
     abstract public function toBroadcaster(): object;
 }

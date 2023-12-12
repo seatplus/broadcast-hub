@@ -10,9 +10,9 @@ it('returns only subscriptions for given notification', function () {
 
     $child_notification = new class extends AbstractNotificationStub
     {
-        public function via(): string
+        public function via(): array
         {
-            return 'test';
+            return ['test'];
         }
 
         public function toBroadcaster(): object
