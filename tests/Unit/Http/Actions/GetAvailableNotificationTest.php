@@ -80,9 +80,9 @@ it('throws exception if validation fails', function () {
     // create NewCorporationNotification
     new class($new_corporation_members, $corporation_info) extends NewCorporationMember
     {
-        public function via(): string
+        public function via(): array
         {
-            return 'broadcasthub';
+            return ['broadcasthub'];
         }
 
         public function toBroadcaster(): object
@@ -116,9 +116,9 @@ function prepareNotificationTest()
     // create NewCorporationNotification
     $notification = new class($new_corporation_members, $corporation_info) extends NewCorporationMember
     {
-        public function via(): string
+        public function via(): array
         {
-            return 'broadcasthub';
+            return ['broadcasthub'];
         }
 
         public function toBroadcaster(): object
